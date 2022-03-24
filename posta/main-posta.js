@@ -17,13 +17,15 @@ for( let i = 0; i < mail.length; i++){
         //Chiedo all'utente se vuole veramente registrarsi 
         let scelta = prompt("Vuoi che ti registriamo al nostro sito? (inserisci si o no)");
         scelta = scelta.toLowerCase();
+
+        //controlli sulla risposta si o no
         if(scelta == "si" || scelta == "no"){ 
             if(scelta == "si"){
                 mail.push(Utente);
                 console.log(mail[mail.length - 1]);
                 alert("grazie per esserti registrato");
             } else if(scelta == "no"){
-                alert("grazie lo stesso per la visita");
+                alert("grazie lo stesso per la visita, Arrivederci ;) ");
             }
         } else {
                 do {
@@ -31,7 +33,14 @@ for( let i = 0; i < mail.length; i++){
                 scelta = prompt("Vuoi registrarti al nostro sito ?");
                 scelta = scelta.toLowerCase();
                 }
-                while(scelta == "si" || scelta == "no");
+                while(scelta != "si" && scelta != "no");
+                if(scelta == "si"){
+                    mail.push(Utente);
+                    console.log(mail[mail.length - 1]);
+                    alert("grazie per esserti registrato");
+                } else if(scelta == "no"){
+                    alert("grazie lo stesso per la visita, Arrivederci ;) ");
+                }
             }
     }    
 }
