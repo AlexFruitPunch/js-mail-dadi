@@ -10,15 +10,12 @@ Utente = Utente.toLowerCase();
 for( let i = 0; i < mail.length; i++){
     if(mail[i] == Utente){
         alert("Benvenuto nella nostra pagina"); 
-    }
-}
-
-for( let i = 0; i < mail.length; i++){
-    if (mail[i] != Utente && i == mail.length - 1){
+        i = mail.length;
+    } else if (mail[i] != Utente && i == mail.length - 1){
         alert("non sei registrato ma ti aggiungiamo noi se vuoi");
 
         //Chiedo all'utente se vuole veramente registrarsi 
-        let scelta = prompt("Vuoi Registrarti che ti registriamo al nostro sito? (inserisci si o no)");
+        let scelta = prompt("Vuoi che ti registriamo al nostro sito? (inserisci si o no)");
         scelta = scelta.toLowerCase();
         if(scelta == "si" || scelta == "no"){ 
             mail.push(Utente);
@@ -32,5 +29,9 @@ for( let i = 0; i < mail.length; i++){
             }
             while(scelta == "si" || scelta == "no");
         }
-    }
+    }    
 }
+
+
+        
+
