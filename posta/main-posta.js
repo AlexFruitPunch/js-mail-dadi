@@ -18,17 +18,21 @@ for( let i = 0; i < mail.length; i++){
         let scelta = prompt("Vuoi che ti registriamo al nostro sito? (inserisci si o no)");
         scelta = scelta.toLowerCase();
         if(scelta == "si" || scelta == "no"){ 
-            mail.push(Utente);
-            console.log(mail[mail.length - 1]);
-            alert("grazie per esserti registrato e benvenuto nella nostra pagina");
-        } else {
-            do {
-            alert("devi inserire solo si o no !!! ");
-            scelta = prompt("Vuoi registrarti al nostro sito ?");
-            scelta = scelta.toLowerCase();
+            if(scelta == "si"){
+                mail.push(Utente);
+                console.log(mail[mail.length - 1]);
+                alert("grazie per esserti registrato");
+            } else if(scelta == "no"){
+                alert("grazie lo stesso per la visita");
             }
-            while(scelta == "si" || scelta == "no");
-        }
+        } else {
+                do {
+                alert("devi inserire solo si o no !!! ");
+                scelta = prompt("Vuoi registrarti al nostro sito ?");
+                scelta = scelta.toLowerCase();
+                }
+                while(scelta == "si" || scelta == "no");
+            }
     }    
 }
 
