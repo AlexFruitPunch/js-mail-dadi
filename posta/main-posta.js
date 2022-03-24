@@ -45,6 +45,8 @@ for( let i = 0; i < mail.length; i++){
     }    
 }
 
+document.getElementById("mel").innerHTML = mail;
+
 
         
 
