@@ -9,8 +9,9 @@ Utente = Utente.toLowerCase();
 //controllo della email inserita 
 for( let i = 0; i < mail.length; i++){
     if(mail[i] == Utente){
-        alert("Benvenuto nella nostra pagina"); 
-        i = mail.length;
+        alert("Benvenuto nella nostra pagina" + Utente);
+        Trovato = true; 
+        break; //in questo modo si termina il ciclo for proprio come nello switch case                                                                                   
     } else if (mail[i] != Utente && i == mail.length - 1){
         alert("non sei registrato ma ti aggiungiamo noi se vuoi");
 
@@ -23,7 +24,7 @@ for( let i = 0; i < mail.length; i++){
             if(scelta == "si"){
                 mail.push(Utente);
                 console.log(mail[mail.length - 1]);
-                alert("grazie per esserti registrato");
+                alert("grazie per esserti registrato" + Utente);
             } else if(scelta == "no"){
                 alert("grazie lo stesso per la visita, Arrivederci ;) ");
             }

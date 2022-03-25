@@ -2,8 +2,8 @@ alert("Benvenuto nel gioco dei dadi");
 alert("cominciamo . . .");
 alert("il vincitore tra me e te sarà quello con il numero più alto");
 
-let SceltaPC ;
-let SceltaGiocatore ;
+let SceltaPC;
+let SceltaGiocatore;
 
 //Lancio del dado del PC
 SceltaPC = Math.floor(Math.random() * 6) + 1;
